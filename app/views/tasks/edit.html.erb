@@ -1,4 +1,4 @@
-<h2>Please enter your new task</h2>
+<h2>Please enter the new values for your task</h2>
 
 <%=form_for(@task) do |f|%>
   <%=f.label :title%>
@@ -10,4 +10,5 @@
   <%=f.submit%>
 <%end%>
 
+<%= link_to "Go back to #{@task.title}", task_path(@task.id) %>
 <%= link_to "Go back to all tasks", tasks_path %>
